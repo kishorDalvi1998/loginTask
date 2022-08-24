@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row form-section">
+        <div class="container">
+            <div class="row fs-block">
+                <div class="offset-md-6 col-md-6">
+                    <div class="fsb-form">
+                        <h2 class="text-center">Welcome</h2>
+                        <p class="text-center">Log in to your account to continue</p>
+                        <form [formGroup]="loginForm">
+                            <div class="input-group mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" formControlName="userName"
+                                    placeholder="Username" id="usr" name="username">
+                                <div class="input-group text-left text-danger d-block">
+                                    <span *ngIf="loginForm.get('userName')?.errors?.required">Please enter
+                                        username</span>
+                                </div>
+
+                            </div>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                </div>
+                                <input type="password" placeholder="Password" formControlName="password"
+                                    class="form-control" id="psw" name="password">
+                                    <div class="input-group text-left text-danger d-block">
+                                        <span *ngIf="loginForm.get('password')?.errors?.required">Please enter
+                                            password</span>
+                                    </div>
+                            </div>
+                            <div class="input-group text-right d-block">
+                                <p><a href="#">Forgot your password?</a></p>
+                            </div>
+                            <input type="submit" value="Log In" (click)="login();" class="mt-3">
+                            <div class="fsb-acc mt-4">
+                                <p><strong>Don't have an account?</strong> <a href="#">Sing up!</a></p>
+                            </div>
+                            <div class="fsb-socials mt-4">
+                                <ul>
+                                    <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

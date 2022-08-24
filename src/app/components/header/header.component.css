@@ -1,0 +1,11 @@
+.navbar{
+    background-color: rgba(49,215,191,.8);
+}
+.icon-color{
+    color: #FFF;
+    cursor: pointer;
+}
+
+::after, ::before {
+    box-sizing: revert;
+}

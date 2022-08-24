@@ -1,0 +1,20 @@
+
+<div class="container mt-5 main-content">
+    <h3 class="txt">User Data</h3>
+    <table class="table mt-3">
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Homeworld</th>
+            <th>Born</th>
+            <th>Jedi</th>
+        </tr>
+        <tr *ngFor="let val of data">
+            <td>{{val.Name}}</td>
+            <td>{{val.Gender}}</td>
+            <td>{{val.Homeworld}}</td>
+            <td>{{val.Born}}</td>
+            <td>{{val.Jedi}}</td>
+        </tr>
+    </table>
+</div>
